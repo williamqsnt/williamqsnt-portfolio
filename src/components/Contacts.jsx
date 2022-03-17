@@ -151,7 +151,7 @@ const TextContent = styled.div`
         font-size : 1.5em;
         color : black;
         border : none;
-        background-color : lightgrey;
+        background-color : #49F2CA;
     }
     .btn{
         text-align : center;

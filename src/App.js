@@ -17,14 +17,10 @@ import { Link } from 'react-scroll'
 function App() {
 
 
-  
   return ( 
     <div className="App">
     <BrowserView>
-   
       <Wrapper>
-        
-
         <div className='fixed'>
           <div className='menus'>
           <img src={logo} alt="logo" width='80px' style={{margin : '2e', position : 'absolute; top : 20px; left : 20px'}} />
@@ -59,14 +55,12 @@ function App() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="contact"><li>Contact</li></Link>
-              
+                to="contact"><li>Contact</li></Link>  
               </ul>
             </nav>
           </div>
         </div>
-
-
+        
         <Body>
           <div className='left'>
             <h2 style={{color : '#49F2CA', fontSize : '2.5em', fontFamily : 'monospace', marginBottom : '1em'}}>I'm William</h2>
