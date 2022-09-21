@@ -156,7 +156,18 @@ const Skill = () => {
 }
 
 const Container = styled.div`
+@media(max-width : 740px){
+    .programming{
+        margin : unset;
 
+        
+    }
+    .all{
+        h2{
+            font-size : 0.5em;
+        }
+    }
+}
 .all{
 
     display : flex;
@@ -172,7 +183,7 @@ const Container = styled.div`
         height : 500px;
         align-items : center;
         flex-direction : column;
-        margin : 3em;
+        margin : 2em;
 
         img{
             background-color : white;

@@ -12,7 +12,7 @@ const Project = () => {
         { title : 'Homely', desc : 'Homely is a dribbble model, it is a single page of accommodation reservation   ', background : Homely, alt : 'This is a project called Homely', url : 'https://williamqsnt.github.io/homely-dribbble/'},
         { title: 'Petqo', desc: 'Petqo is a dribbble model, it is a single page of a pet shop', background : Petqo, alt : 'This is a project called Petqo', url : 'https://williamqsnt.github.io/petqo-dribbble/'},
         { title: 'Jobsa', desc : 'Jobsa is a dribbble model, it is a single page of a job application.', background : Jobsa, alt : 'This is a project called Jobsa', url : 'https://williamqsnt.github.io/jobsa-dribble/'},
-    ]
+    ];
 
     return(
      <TextContent>

@@ -5,13 +5,13 @@ import desktop from './img/desktop.png'
 import mail from './img/mail.svg'
 import pp from './img/pp.jpg'
 import Skill from './components/Skill';
-import taishi from './assets/projects/taishi.png'
+import axians from './assets/projects/axians.png'
 import Contacts from './components/Contacts';
 import Carousel from './components/Carousel';
 import Project from './components/Project';
 import logo from './assets/icons/logo.png'
-
 import { Link } from 'react-scroll'
+import Mobile from './Mobile';
 
 
 function App() {
@@ -60,6 +60,7 @@ function App() {
             </nav>
           </div>
         </div>
+
         
         <Body>
           <div className='left'>
@@ -76,7 +77,6 @@ function App() {
               </div>
               <div className='link'>
                 <a href="mailto:quesnot.william@hotmail.com">
-                  <img src={mail} alt="mail" />
                   <p>quesnot.william@hotmail.com</p>
                 </a>
               </div>
@@ -91,7 +91,7 @@ function App() {
               <img src={pp} alt="pp" />
             </div>
             <div className='right'>
-              <p style={{fontWeight : "400", color : 'lightgrey', textAlign : 'justify', margin : '1.5em'}}>My name is <strong style={{color : '#49F2CA'}}> William Quesnot</strong>. I did a scientific baccalaureate. Then, I did a Google distance training in digital marketing and I obtained the diploma <strong style={{color : '#49F2CA'}}> "The fundamentals of Digital Marketing"</strong>.<br/><br/>
+              <p style={{fontWeight : "400", color : 'lightgrey', textAlign : 'justify'}}>My name is <strong style={{color : '#49F2CA'}}> William Quesnot</strong>. I did a scientific baccalaureate. Then, I did a Google distance training in digital marketing and I obtained the diploma <strong style={{color : '#49F2CA'}}> "The fundamentals of Digital Marketing"</strong>.<br/><br/>
                     Being passionate about new technologies and computers, I learned JavaScript programming language on my own, often used in interactive web pages. Subsequently I combined it with <strong style={{color : '#49F2CA'}}>HTML and CSS </strong> technologies to do <strong style={{color : '#49F2CA'}}>web development</strong>. <br/>I am currently in computer engineering school to perfect my knowledge and skills.<br/><br/>
                     I am motivated and curious to learn new things. I want to develop my knowledge and skills in order to put them into practice in various projects and accomplish my professional goals.
               </p>
@@ -122,19 +122,19 @@ function App() {
                 <a href="https://google.com" rel="noreferrer" target="_blank">View</a>
               </div>
               <div className='img'>
-                <img src={taishi} width='200px' alt="taishifood"/>
+                <img src={axians} width='200px' alt="taishifood"/>
               </div>
               <div className='desc'>
-                <h3>Taï Shi</h3>
+                <h3>Axians Audiovisuel Lyon</h3>
                 <ul>
-                  <li>react</li>
-                  <li>emotion.sh</li>
-                  <li>airtable</li>
-                  <li>api</li>
+                  <li>NextJS</li>
+                  <li>Tailwind</li>
+                  <li>CMS Contentful</li>
+                  <li>API</li>
                 </ul>
 
                 <p style={{textAlign : 'justify', margin : '2em'}}>
-                This website was created for the Taï Shi food truck. This site allows the food truck to improve the notoriety. In addition, it allows him to be present on the web in order to make himself known to different customers as well as to create among his competitors. This site aims to display the menus of the food truck in order to inform about the different products sold to attract customers. In addition, by creating this site, I brought a novelty to the food truck which is online orders. Indeed, this site includes a possibility of ordering to pick up its products at another time.
+                I did 2 months ofx internship at Axians, an audiovisual company. We had the mission to create their website to make sales. Indeed we used the NextJS framework mainly for its server side and its natural referencing thanks to the speed of loading of NextJS. So we used a CMS, Contentful, which allows the company to easily modify the information on the website.
                 </p>
               </div>
             </div>
@@ -179,7 +179,7 @@ function App() {
     </BrowserView>
 
     <MobileView>
-      <H2>IS BUILDING ...</H2>
+      <Mobile />
     </MobileView>
     </div>
   );
@@ -198,6 +198,14 @@ const Projects = styled.div`
 `
 
 const Experience = styled.div`
+  @media(max-width : 740px){
+    .all{
+      .exp{
+        width : 300px;  
+      }
+    }
+  }
+
   background-color : rgb(10,25,47);
   height : 100vh;
   width : 100%;
@@ -306,6 +314,9 @@ const Experience = styled.div`
 `
 
 const Skills = styled.div`
+  @media(max-width : 740px){
+    padding-top : 0;
+  }
   background-color : rgb(10,25,47);
   color : lightgrey;
   height :  120vh;
@@ -316,6 +327,25 @@ const Skills = styled.div`
 
 
 const About = styled.div`
+  @media(max-width : 740px){
+    height : 100vh;
+    .carousel{
+      display : none;
+    }
+    .all{
+      flex-direction : column;
+      align-items : center;
+      justify-content : center;
+
+      .left{
+        align-items : center;
+        justify-content : center;
+      }
+      .right{
+        
+      }
+    }
+  }
   height : 50vh;
   width : 100%;
   background-color : ligthgrey;
@@ -346,9 +376,10 @@ const About = styled.div`
       align-items : center;
       justify-content : center;
       margin-left : 2em;
+      margin-right : 5em;
       width : 50%;
       height : 100%;
-      margin-right : 12.5em;
+      
     }
 
    
@@ -358,6 +389,16 @@ const About = styled.div`
 `
 
 const Body = styled.div`
+  @media(max-width : 740px){
+    align-items : center;
+    justify-content : center;
+    flex-direction : column;
+
+    h1{
+      text-align : center;
+    }
+  }
+
   height : 100vh;
   background-color : rgb(10, 25, 47);
   display : flex;
@@ -401,6 +442,7 @@ const Body = styled.div`
 
     .mail{
       border : 1px solid #49F2CA;
+      padding : 1em;
 
       :hover{
         transition : 0.8s;
@@ -414,11 +456,12 @@ const Body = styled.div`
         justify-content : center;
         
         p{
-          margin-top : 4em;
+          margin-top : 1em;
+          padding : 2em;
           position : absolute;
 
           :hover{
-            z-index : 3
+            z-index : 5
           }
         }
       }
@@ -455,7 +498,11 @@ const Body = styled.div`
 `
 
 const Wrapper = styled.div`
-
+  @media(max-width : 740px){
+    .fixed{
+      display : none;
+    }
+  }
 
   *{
     padding : 0;

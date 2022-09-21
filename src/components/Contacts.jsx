@@ -1,16 +1,15 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
 
-
 const Contacts = () =>{
-
+    
+    let cleAPI = process.env.REACT_APP_CLE_API;
     const Airtable = require('airtable');
-    const base = new Airtable({apiKey: 'keyG3mWvlLfFyCAkc' }).base('appLonkibDKT9LuDB');
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [message, setMessage] = useState("")
+    const base = new Airtable({apiKey: cleAPI }).base('appLonkibDKT9LuDB');
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
     const createData = async (Name,Email, Message) => {
-      
     base('Portfolio_Contact').create([
         {
           "fields": {
@@ -30,7 +29,7 @@ const Contacts = () =>{
       });
     }
 
-    const [Forms, updateForms] = useState(false)
+    const [Forms, updateForms] = useState(false);
 
     return Forms ? (
         <FormsMessage>
@@ -123,7 +122,7 @@ const FormsMessage = styled.div`
     }
 `
 const TextContent = styled.div`
- 
+
     .Contact h3{
         margin-left : 1em;
         margin-right : 1em;
@@ -151,7 +150,7 @@ const TextContent = styled.div`
         font-size : 1.5em;
         color : black;
         border : none;
-        background-color : #49F2CA;
+        background-color : white;
     }
     .btn{
         text-align : center;
@@ -178,13 +177,13 @@ const TextContent = styled.div`
         align-items : center;
         flex-direction : column;
         justify-content : center;
-    
+
     }
     .Contact h2{
         color : #FF5151;
         font-size : 4em;
-        letter-spacing : 5px;
-        
+        letter-spacing : 5px;  
+
     }
 
 `
